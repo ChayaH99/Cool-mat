@@ -141,6 +141,8 @@ add_action( 'widgets_init', 'cool_mat_widgets_init' );
  */
 function cool_mat_scripts() {
 	wp_enqueue_style( 'cool-mat-style', get_stylesheet_uri(), array(), _S_VERSION );
+
+	wp_enqueue_style('coolmat-custom', get_template_directory_uri() . '/css/custom.css');
 	wp_style_add_data( 'cool-mat-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'cool-mat-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
