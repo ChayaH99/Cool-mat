@@ -19,7 +19,7 @@
 
 	<?php wp_head(); ?>
 	<!-- <link rel="stylesheet" href= "<?php bloginfo('template_url');?> 
-    /css/custom.css">
+    /css/custom.css">-->
 </head>
 
 <body <?php body_class(); ?>>
@@ -33,14 +33,14 @@
 	<div class="header-inner">
 
 		<div class="site-branding">
-			<img src="<?php bloginfo('template_url');?> /assets/coolmat_logo.svg"
 			<div class="logo">
-			</div>
-		</div><!-- .site-branding -->
+			
+			<img src="<?php bloginfo('template_url');?> /assets/coolmat_logo.svg"></div>
+		</div><!-- #site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
 			
-			wp_nav_menu(
+		<?php wp_nav_menu(
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
@@ -52,5 +52,5 @@
 		<div class="language-select">
 		KOR / ENG
 		</div>
-		</div>
+		
 	</header><!-- #masthead -->
