@@ -25,17 +25,13 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'cool-mat' ); ?></a>
+	
 
 	<header id="masthead" class="site-header">
-
-
-	<div class="header-inner">
-
-		<div class="site-branding">
-			<div class="logo">
+		<div class="header-inner container">
+		<div class="site-branding">	
 			
-			<img src="<?php bloginfo('template_url');?> /assets/coolmat_logo.svg"></div>
+			<img src="<?php bloginfo('template_url');?> /assets/coolmat_logo.svg" class="logo">
 		</div><!-- #site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
@@ -48,9 +44,13 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
-
+    
 		<div class="language-select">
-		KOR / ENG
+		<a lang="ko-KR" hreflang="ko-KR" href="<?php echo site_url('/kr'); ?>">KR</a> | <a lang="en-US" hreflang="en-US" href="<?php echo site_url(); ?>">EN</a>
+			
 		</div>
-		
+		</div>
+	
 	</header><!-- #masthead -->
+
+	<div id="content" class="site content">
